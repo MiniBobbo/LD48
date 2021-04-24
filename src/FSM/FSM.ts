@@ -43,4 +43,9 @@ export class FSM {
             this.currentModule.update(dt);
         }
     }
+
+    dispose() {
+        this.clearModule();
+        this.modules.clear();
+    }
 }

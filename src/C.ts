@@ -1,7 +1,7 @@
 import { GameData } from "./GameData";
 
 export class C {
-    static currentLevel:string = 'Level_0';
+    static currentLevel:string = 'Level_1';
 
     static TILE_SIZE:number = 10;
     // static GRAVITY:number = 0;

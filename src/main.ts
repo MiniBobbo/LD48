@@ -6,6 +6,8 @@ import { MainMenuScene } from "./scenes/MainMenuScene";
 import { TestScene } from "./scenes/TestScene";
 import { GameScene } from "./scenes/GameScene";
 import { WinScene } from "./scenes/WinScene";
+import { LoseScene } from "./scenes/LoseScene";
+import { RestartScene } from "./scenes/RestartScene";
 
 
 class Main extends Phaser.Game {
@@ -34,6 +36,8 @@ class Main extends Phaser.Game {
 
     // this.scene.add("boot", Boot, false);
     this.scene.add("win", WinScene, false);
+    this.scene.add("lose", LoseScene, false);
+    this.scene.add("restart", RestartScene, false);
     this.scene.add("preload", Preload, false);
     this.scene.add("game", GameScene, false);
     this.scene.add("test", TestScene, false);

@@ -104,6 +104,7 @@ export class Flame {
         this.scene.events.removeListener('flameon', this.FlameOn, this);
         this.scene.events.removeListener('flameon', this.FlameOn, this);
         this.scene.events.removeListener(Phaser.Core.Events.PRE_RENDER, this.Update, this);
+        this.collision.destroy();
 
     }
 

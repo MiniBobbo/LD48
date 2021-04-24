@@ -5,19 +5,20 @@ Sprint 2 - Third level adding water hazards that put out the fire.
 
 
 
-MVP
+MVP - DONE!!!
 - Main Menu
 - Start Level
 - End Level
-Fireball thing you throw
+- Fireball thing you throw
 - Level 1
 
-Graphics
+Graphics - DONE!!!
 - Sewer Entrance
 - Sewer Exit
 - Menu Grahpics
 
 Sprint 1 - 
+Level Transitions
 Torches
 Spikes
 Timer for levels

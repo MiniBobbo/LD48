@@ -38,8 +38,12 @@ export class Entity {
     }
 
     dispose() {
+        console.log(`Entity disposed.`);
         this.scene.events.removeListener('update',this.Update, this)
         this.scene.events.removeListener('travel',() => {this.fsm.clearModule();}, this);
+        this.fsm.dispose();
+        this.sprite.destroy();
+        this.sprite = null;
     }
 
     Update(time:number, dt:number) {

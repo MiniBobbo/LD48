@@ -150,8 +150,12 @@ export class LdtkReader {
             tileHeight: layer.__gridSize
         });
         var csv = layer.intGridCsv;
+        let csvcopy = [];
+        csv.forEach(element => {
+            csvcopy.push(element);
+        });
         const newArr = [];
-        while(csv.length) newArr.push(csv.splice(0, layer.__cWid));
+        while(csvcopy.length) newArr.push(csvcopy.splice(0, layer.__cWid));
 
         map = this.scene.make.tilemap({
             data:newArr,
@@ -173,6 +177,14 @@ export class LDtkMapPack {
 
     constructor() {
         this.displayLayers = [];
+    }
+
+    dispose() {
+        console.log('Map pack disposed of');
+        this.collideLayer.destroy();
+        this.displayLayers.forEach(element => {
+            element.destroy();
+        });
     }
 }
 

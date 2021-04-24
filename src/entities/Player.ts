@@ -29,6 +29,11 @@ export class Player extends Entity {
         this.light = scene.lights.addLight(0,0,18, 0xffffff,2);
         
         this.sprite.on('throw', this.TryThrow, this);
+        this.sprite.on('dead', this.TryThrow, this);
+    }
+
+    Dead() {
+        
     }
 
     TryThrow() {
@@ -71,7 +76,10 @@ export class Player extends Entity {
     }
 
     dispose() {
+        console.log('Player Disposed');
         this.sprite.removeListener('flamereset', this.FlameReset, this);
+        // this.sprite.destroy();
+        super.dispose();
 
     }
 

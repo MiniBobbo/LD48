@@ -28,7 +28,8 @@ export class SetupMapHelper {
             element.setPipeline('Light2D');
         });
 
-        gs.cameras.main.setBounds(0,0, maps.collideLayer.width, maps.collideLayer.height);
+        // gs.cameras.main.setBounds(0,0, maps.collideLayer.width, maps.collideLayer.height);
+        gs.cameras.main.setBounds(0,0, 400, 400);
 
 
         this.CreateEntities(gs, maps);
