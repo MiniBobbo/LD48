@@ -811,10 +811,13 @@
 			"externalRelPath": null,
 			"fieldInstances": [{
 				"__identifier": "Ambient",
-				"__value": "0xffffff",
+				"__value": "0x000000",
 				"__type": "String",
 				"defUid": 44,
-				"realEditorValues": [null]
+				"realEditorValues": [{
+					"id": "V_String",
+					"params": ["0x000000"]
+				}]
 			}],
 			"layerInstances": [
 				{

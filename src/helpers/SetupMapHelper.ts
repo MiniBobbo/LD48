@@ -55,6 +55,7 @@ export class SetupMapHelper {
         gs.player.sprite.alpha = 0;
         gs.cameras.main.startFollow(gs.player.sprite);
         gs.flame = new Flame(gs);
+        gs.collideMap.push(gs.flame.collision);
         gs.events.emit('flameoff');
 
 

@@ -36,6 +36,7 @@ export class GameScene extends Phaser.Scene {
     PlayerWin() {
         console.log("Win");
         this.events.emit('holdinput');
+        this.flame.FlameOff();
         this.player.changeFSM('gotoground');
         this.player.sprite.disableBody(false);
         this.player.sprite.setPosition(this.endLocation.x, this.endLocation.y);

@@ -1,3 +1,4 @@
+import { C } from "./C";
 import { GameScene } from "./scenes/GameScene";
 
 export class Flame {
@@ -19,6 +20,7 @@ export class Flame {
         let p = this.scene.add.particles('atlas').setPipeline('Light2D').setDepth(101);
 
         this.collision = scene.physics.add.sprite(10,10, 'atlas',  'particles_1');
+        this.collision.setBounce(.3).setDragX(C.PLAYER_GROUND_DRAG);
 
         this.e = p.createEmitter({
             frame:'particles_1',
@@ -56,19 +58,24 @@ export class Flame {
     }
     Update(arg0: string, Update: any, arg2: this) {
         if(this.thrown) {
+            if(this.collision.body.blocked.down)
+                this.collision.setDragX(C.PLAYER_GROUND_DRAG);
+            else
+            this.collision.setDragX(0);
+
             this.SetPosition(this.collision.x, this.collision.y);
         }
     }
 
 
-    FlameOff(arg0: string, FlameOff: any, arg2: this) {
+    FlameOff() {
         this.e.stop();
         this.e2.stop();
         this.light.setVisible(false);
         this.currentlyOn = false;
     }
 
-    FlameOn(arg0: string, FlameOn: any, arg2: this) {
+    FlameOn() {
         this.e.start();
         this.e2.start();
         this.light.setVisible(true);

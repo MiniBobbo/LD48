@@ -7,7 +7,7 @@ import { PlayerAttack } from "../FSM/PlayerAttack";
 import { PlayerGoToGround } from "../FSM/PlayerGoToGround";
 
 export class Player extends Entity {
-    holdingLight:boolean = true;
+    holdingLight:boolean = false;
     light:Phaser.GameObjects.Light;
     constructor(scene:Phaser.Scene, ih:IH) {
         super(scene, ih);
@@ -28,13 +28,22 @@ export class Player extends Entity {
 
         this.light = scene.lights.addLight(0,0,18, 0xffffff,2);
         
-        this.sprite.on('flamereset', this.FlameReset, this);
+        this.sprite.on('throw', this.TryThrow, this);
     }
 
-    FlameReset(arg0: string, FlameReset: any, arg2: this) {
+    TryThrow() {
+        if(this.holdingLight) {
+            this.ThrowLight();
+        } else {
+            this.FlameReset();
+        }
+    }
+
+    FlameReset() {
         this.gs.flame.thrown = false;
         this.gs.events.emit('flameon');
         this.holdingLight = true;
+        this.gs.flame.collision.setPosition(-1000,-1000).setGravityY(0).setVelocity(0,0);
 
     }
 
@@ -47,6 +56,17 @@ export class Player extends Entity {
             xoffset *= -1;
             this.gs.flame.SetPosition(this.sprite.x + xoffset, this.sprite.y + -3);
         }
+    }
+
+    ThrowLight() {
+        this.gs.flame.thrown = true;
+        this.holdingLight = false;
+        this.gs.flame.collision.setPosition(this.gs.flame.light.x, this.sprite.y);
+        let spdx = this.sprite.flipX ? C.PLAYER_THROW_X * -1 :C.PLAYER_THROW_X; 
+        this.gs.flame.collision.setVelocity(spdx, C.PLAYER_THROW_Y);
+        this.gs.flame.collision.setGravityY(C.GRAVITY/5);
+        
+
 
     }
 

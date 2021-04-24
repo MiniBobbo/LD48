@@ -17,6 +17,9 @@ export class C {
     static PLAYER_JUMP_STR:number = 200;
     static PLAYER_JUMP_TIME:number = 300;
     static PLAYER_ATTACK_TIME:number = 250;
+    static PLAYER_THROW_X:number = 150;
+    static PLAYER_THROW_Y:number = -100;
+
 
     static FLAG_COUNT:number = 100;
     static gd:GameData;
