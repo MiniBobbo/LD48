@@ -1,0 +1,39 @@
+MVP - Character moves around and can complete a level.  Create and throw fire.
+
+Sprint 1 - Add a second level with spikes.  Player can die and restart level.
+Sprint 2 - Third level adding water hazards that put out the fire.  
+
+
+
+MVP
+- Main Menu
+- Start Level
+- End Level
+Fireball thing you throw
+- Level 1
+
+Graphics
+- Sewer Entrance
+- Sewer Exit
+- Menu Grahpics
+
+Sprint 1 - 
+Torches
+Spikes
+Timer for levels
+Total Time on Main Menu
+Reset on Death
+Scene Resets without problems
+Level 2
+
+Sprint 1 Graphics
+Death animation
+
+
+Sprint 2
+Water
+Water puts out flame
+Level 3
+
+Sprint 2 Graphics
+Extinguish flame 

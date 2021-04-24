@@ -1,0 +1,28 @@
+{
+  "name": "init2",
+  "version": "1.0.0",
+  "description": "Phaser 3 base",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server",
+    "build": "webpack --config prod.js",
+    "watch": "webpack --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "phaser": "^3.20.1",
+    "raw-loader": "^3.1.0",
+    "terser-webpack-plugin": "^2.2.1",
+    "ts-loader": "^6.2.0",
+    "typescript": "^3.6.4",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.9"
+  }
+}

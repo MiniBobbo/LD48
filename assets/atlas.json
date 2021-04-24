@@ -1,0 +1,357 @@
+{
+	"textures": [
+		{
+			"image": "atlas.png",
+			"normalMap": "atlas_n.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 131,
+				"h": 64
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "WinThing",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 150,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 2,
+						"w": 129,
+						"h": 45
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 129,
+						"h": 45
+					}
+				},
+				{
+					"filename": "doors_closed_0",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 18,
+						"h": 15
+					},
+					"frame": {
+						"x": 1,
+						"y": 48,
+						"w": 18,
+						"h": 15
+					}
+				},
+				{
+					"filename": "doors_open_0",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 18,
+						"h": 15
+					},
+					"frame": {
+						"x": 21,
+						"y": 48,
+						"w": 18,
+						"h": 15
+					}
+				},
+				{
+					"filename": "player_run_0",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 8,
+						"w": 16,
+						"h": 14
+					},
+					"frame": {
+						"x": 41,
+						"y": 48,
+						"w": 16,
+						"h": 14
+					}
+				},
+				{
+					"filename": "player_run_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 8,
+						"y": 8,
+						"w": 16,
+						"h": 14
+					},
+					"frame": {
+						"x": 59,
+						"y": 48,
+						"w": 16,
+						"h": 14
+					}
+				},
+				{
+					"filename": "guy_stand_0",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 9,
+						"w": 15,
+						"h": 14
+					},
+					"frame": {
+						"x": 77,
+						"y": 48,
+						"w": 15,
+						"h": 14
+					}
+				},
+				{
+					"filename": "player_jumpdown_0",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 9,
+						"w": 15,
+						"h": 14
+					},
+					"frame": {
+						"x": 77,
+						"y": 48,
+						"w": 15,
+						"h": 14
+					}
+				},
+				{
+					"filename": "player_jumpup_0",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 9,
+						"w": 15,
+						"h": 14
+					},
+					"frame": {
+						"x": 77,
+						"y": 48,
+						"w": 15,
+						"h": 14
+					}
+				},
+				{
+					"filename": "player_run_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 9,
+						"w": 15,
+						"h": 14
+					},
+					"frame": {
+						"x": 77,
+						"y": 48,
+						"w": 15,
+						"h": 14
+					}
+				},
+				{
+					"filename": "player_run_3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 9,
+						"w": 15,
+						"h": 14
+					},
+					"frame": {
+						"x": 77,
+						"y": 48,
+						"w": 15,
+						"h": 14
+					}
+				},
+				{
+					"filename": "player_stand_0",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 9,
+						"w": 15,
+						"h": 14
+					},
+					"frame": {
+						"x": 77,
+						"y": 48,
+						"w": 15,
+						"h": 14
+					}
+				},
+				{
+					"filename": "player_walktowards_0",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 9,
+						"w": 12,
+						"h": 14
+					},
+					"frame": {
+						"x": 94,
+						"y": 48,
+						"w": 12,
+						"h": 14
+					}
+				},
+				{
+					"filename": "player_walktowards_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 10,
+						"y": 9,
+						"w": 12,
+						"h": 14
+					},
+					"frame": {
+						"x": 108,
+						"y": 48,
+						"w": 12,
+						"h": 14
+					}
+				},
+				{
+					"filename": "particles_0",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2,
+						"h": 2
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2,
+						"h": 2
+					},
+					"frame": {
+						"x": 122,
+						"y": 48,
+						"w": 2,
+						"h": 2
+					}
+				},
+				{
+					"filename": "particles_1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2,
+						"h": 2
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2,
+						"h": 2
+					},
+					"frame": {
+						"x": 122,
+						"y": 52,
+						"w": 2,
+						"h": 2
+					}
+				},
+				{
+					"filename": "particles_2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 2,
+						"h": 2
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 2,
+						"h": 2
+					},
+					"frame": {
+						"x": 122,
+						"y": 56,
+						"w": 2,
+						"h": 2
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:17eda8d89591185ff07f9bf52317dde7:890157a9f0d2c4a4d054a8973e5cd023:0fa6ba49f102de34a1260816cef426e4$"
+	}
+}
