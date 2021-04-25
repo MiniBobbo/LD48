@@ -112,7 +112,7 @@ export class SetupMapHelper {
     static CreatePhysics(gs:GameScene, maps:LDtkMapPack) {
         gs.physics.add.collider(gs.collideMap, maps.collideLayer);
         let EndLocation = maps.entityLayers.entityInstances.find((i:EntityInstance) =>  i.__identifier === 'End');
-        let endzone = gs.add.zone(EndLocation.px[0], EndLocation.px[1], 10,10);
+        let endzone = gs.add.zone(EndLocation.px[0]-1, EndLocation.px[1]+2, 4,4).setOrigin(0,0);
         gs.physics.world.enable(endzone);
 
         gs.physics.add.overlap(gs.player.sprite, endzone , () => {  gs.events.emit('playerwin');});
