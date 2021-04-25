@@ -21,6 +21,8 @@ export class C {
     static PLAYER_JUMP_TIME:number = 200;
     static PLAYER_THROW_X:number = 100;
     static PLAYER_THROW_Y:number = -75;
+    static PLAYER_THROW_UP:{x:number, y:number} = {x:20, y: -150};
+    static PLAYER_THROW_DOWN:{x:number, y:number} = {x:20, y: -20};
     static MAX_LEVEL:number = 3;
 
 

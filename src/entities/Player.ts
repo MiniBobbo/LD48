@@ -63,8 +63,21 @@ export class Player extends Entity {
         this.gs.flame.thrown = true;
         this.holdingLight = false;
         this.gs.flame.collision.setPosition(this.gs.flame.light.x, this.sprite.y);
-        let spdx = this.sprite.flipX ? C.PLAYER_THROW_X * -1 :C.PLAYER_THROW_X; 
-        this.gs.flame.collision.setVelocity(spdx, C.PLAYER_THROW_Y);
+        let throwstr:{x:number, y:number} = {x:0, y:0};
+        if(this.ih.IsPressed('up')) {
+            throwstr.x = C.PLAYER_THROW_UP.x;
+            throwstr.y = C.PLAYER_THROW_UP.y;
+        } else if (this.ih.IsPressed('down')) {
+            throwstr.x = C.PLAYER_THROW_DOWN.x;
+            throwstr.y = C.PLAYER_THROW_DOWN.y;
+        } else {
+            throwstr.x = C.PLAYER_THROW_X;
+            throwstr.y = C.PLAYER_THROW_Y;
+        }
+        if(this.sprite.flipX) {
+            throwstr.x *= -1;
+        }
+        this.gs.flame.collision.setVelocity(throwstr.x, throwstr.y);
         this.gs.flame.collision.setGravityY(C.GRAVITY/5);
         
 

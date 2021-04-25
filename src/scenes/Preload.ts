@@ -113,8 +113,8 @@ export class Preload extends Phaser.Scene {
         this.anims.create({ key: 'player_jumpup_hold', frameRate: 20, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_jumpup_hold_', end: 0}), repeat: -1 });
         this.anims.create({ key: 'player_dead', frameRate: 60, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_dead.png_', end: 36}), repeat: 0 });
         this.anims.create({ key: 'player_dead_hold', frameRate: 60, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_dead.png_', end: 36}), repeat: 0 });
-        this.anims.create({ key: 'player_jumpdown', frameRate: 2, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_jumpdown_', end: 1}), repeat: 0 });
-        this.anims.create({ key: 'player_jumpdown_hold', frameRate: 2, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_jumpdown_hold_', end: 1}), repeat: 0 });
+        this.anims.create({ key: 'player_jumpdown', frameRate: 3, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_jumpdown_', end: 1}), repeat: 0 });
+        this.anims.create({ key: 'player_jumpdown_hold', frameRate: 3, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_jumpdown_hold_', end: 1}), repeat: 0 });
 
     }
 }
