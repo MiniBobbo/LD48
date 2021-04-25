@@ -23,12 +23,14 @@ Torches
 Spikes
 Timer for levels
 Total Time on Main Menu
-Reset on Death
-Scene Resets without problems
+- Text in level editor
+- Reset on Death
+- Scene Resets without problems
 Level 2
 
 Sprint 1 Graphics
-Death animation
+- Death animation
+- Torches
 
 
 Sprint 2
@@ -38,3 +40,8 @@ Level 3
 
 Sprint 2 Graphics
 Extinguish flame 
+
+
+Later
+Particles when the fireball hits stuff.
+

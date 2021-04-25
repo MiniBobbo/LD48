@@ -15,7 +15,8 @@ export class GameScene extends Phaser.Scene {
     firstBoot:boolean = true;
     gs:GameState = GameState.GAME;
     winThing:Phaser.GameObjects.Sprite;
-    
+    elapsedTime:number = 0;
+    elapsedTimeLabel:Phaser.GameObjects.BitmapText;
 
     preload() {
         this.ih = new IH(this);
@@ -27,12 +28,15 @@ export class GameScene extends Phaser.Scene {
             this.init();
         }
 
+        this.elapsedTime = 0;
+        this.elapsedTimeLabel = this.add.bitmapText(1,1,'8px', '').setScrollFactor(0,0).setDepth(300);
         this.gs = GameState.GAME;
         this.endLocation = {x:0, y:0};
         let r = new LdtkReader(this,this.cache.json.get('levels'));
         this.events.emit('holdinput');
         this.maps = r.CreateMap(C.currentLevel, 'tileset');
         SetupMapHelper.SetupMap(this, this.maps);
+        
 
         this.DisplayPlayer();
 
@@ -53,15 +57,17 @@ export class GameScene extends Phaser.Scene {
 
     PlayerLose() {
         console.log("Lose");
+        this.gs = GameState.LOSE;
         this.events.emit('holdinput');
         this.flame.FlameOff();
         this.player.changeFSM('gotoground');
         this.player.sprite.disableBody(false);
         // this.player.sprite.setPosition(this.endLocation.x, this.endLocation.y);
         this.player.PlayAnimation('dead');
-        this.time.delayedCall(1000, () => {
-            console.log('Restarting game scene');
-            this.scene.start('restart')});
+        // this.time.delayedCall(1000, () => {
+        //     console.log('Restarting game scene');
+        //     this.scene.start('restart')});
+        this.scene.launch('lose').moveAbove('game', 'lose');
         
 
     }
@@ -81,6 +87,7 @@ export class GameScene extends Phaser.Scene {
 
     PlayerWin() {
         console.log("Win");
+        this.gs = GameState.WIN;
         this.events.emit('holdinput');
         this.flame.FlameOff();
         this.player.changeFSM('gotoground');
@@ -113,6 +120,10 @@ export class GameScene extends Phaser.Scene {
     }
 
     update(time:number, dt:number) {
+        if(this.gs == GameState.GAME) {
+            this.elapsedTime += dt;
+            this.elapsedTimeLabel.text = `${(this.elapsedTime/1000).toFixed(2)}`;
+        }
         this.ih.update();
         if(this.ih.IsJustPressed('attack')) {
             this.player.sprite.emit('throw');

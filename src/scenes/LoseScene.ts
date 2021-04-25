@@ -10,7 +10,7 @@ export class LoseScene extends Phaser.Scene {
             duration:1000,
             y: 100,
             onComplete: () => {
-                this.scene.start('game');
+                // this.scene.start('game');
             }
         });
 

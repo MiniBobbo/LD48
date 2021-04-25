@@ -18,7 +18,7 @@ export class Player extends Entity {
         this.sprite.setSize(9,9);
         this.sprite.name = 'player';
         this.sprite.setGravityY(C.GRAVITY);
-        this.sprite.setDepth(101);
+        this.sprite.setDepth(150);
         this.PlayAnimation('run');
         this.fsm.addModule('ground', new PlayerGround(this));
         this.fsm.addModule('air', new PlayerAir(this));

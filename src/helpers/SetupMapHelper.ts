@@ -1,4 +1,5 @@
 import { Player } from "../entities/Player";
+import { Torch } from "../entities/Torch";
 import { Flame } from "../Flame";
 import { EntityInstance, FieldInstance, LDtkMapPack } from "../map/LDtkReader";
 import { GameScene } from "../scenes/GameScene";
@@ -46,6 +47,16 @@ export class SetupMapHelper {
         gs.add.sprite(EndLocation.px[0], EndLocation.px[1] + 5, 'atlas', 'doors_open_0').setPipeline('Light2D');
         gs.endLocation.x = EndLocation.px[0];
         gs.endLocation.y = EndLocation.px[1] + 5;
+
+        maps.entityLayers.entityInstances.forEach(element => {
+            if(element.__identifier == 'Text') {
+                let message = element.fieldInstances[0];
+                let t = gs.add.bitmapText(element.px[0], element.px[1], '8px', message.__value)
+                .setPipeline('Light2D').setMaxWidth(element.width).setDepth(150);
+            } else if (element.__identifier == 'Torch') {
+                let t = new Torch(gs, element);
+            }
+        });
 
     }
 
