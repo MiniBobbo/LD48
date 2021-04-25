@@ -101,6 +101,7 @@ export class Preload extends Phaser.Scene {
         this.anims.create({ key: 'door_closed', frameRate: 60, frames: this.anims.generateFrameNames('atlas', { prefix: 'doors_closed_', end: 0}), repeat: -1 });
         this.anims.create({ key: 'door_open', frameRate: 60, frames: this.anims.generateFrameNames('atlas', { prefix: 'doors_open_', end: 0}), repeat: -1 });
         this.anims.create({ key: 'ghost_float', frameRate: 6, frames: this.anims.generateFrameNames('atlas', { prefix: 'ghosts_float_', end: 3}), repeat: -1 });
+        this.anims.create({ key: 'ghost_angry', frameRate: 6, frames: this.anims.generateFrameNames('atlas', { prefix: 'ghosts_angered_', end: 3}), repeat: -1 });
         this.anims.create({ key: 'waterfall_overflow', frameRate: 6, frames: this.anims.generateFrameNames('atlas', { prefix: 'waterfall_overflow_', end: 3}), repeat: -1 });
         this.anims.create({ key: 'waterfall_falling', frameRate: 6, frames: this.anims.generateFrameNames('atlas', { prefix: 'waterfall_falling_', end: 3}), repeat: -1 });
         this.anims.create({ key: 'waterfall_hitting', frameRate: 6, frames: this.anims.generateFrameNames('atlas', { prefix: 'waterfall_hitting_', end: 3}), repeat: -1 });

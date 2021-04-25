@@ -199,6 +199,7 @@ export class GameScene extends Phaser.Scene {
             this.player.PlayAnimation('stand');
             this.events.emit('resumeinput');
             this.gs = GameState.GAME;
+            this.events.emit('startlevel');
         });
         // this.tweens.add( {
         //     targets:[this.player.sprite],

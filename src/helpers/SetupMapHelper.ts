@@ -54,11 +54,16 @@ export class SetupMapHelper {
             if(element.__identifier == 'Text') {
                 let message = element.fieldInstances[0];
                 let t = gs.add.bitmapText(element.px[0], element.px[1], '8px', message.__value)
-                .setPipeline('Light2D').setMaxWidth(element.width).setDepth(150);
+                .setPipeline('Light2D').setMaxWidth(element.width).setDepth(150).setCenterAlign();
             } else if (element.__identifier == 'Torch') {
                 let t = new Torch(gs, element);
             } else if (element.__identifier == 'Ghost') {
                 let g = new Ghost(gs, gs.ih);
+                if(!element.fieldInstances[0].__value) {
+                    g.CollideMap();
+                } else {
+                    g.fsm.changeModule('angrywait');
+                }
                 g.sprite.setPosition(element.px[0], element.px[1]);
                 gs.dangerSprites.push(g.sprite);
             } else if (element.__identifier == 'Waterfall') {

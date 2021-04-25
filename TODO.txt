@@ -44,10 +44,15 @@ Sprint 2
 Sprint 3
 - Ghosts that run away from the light but will kill you if they hit you.
 - Wandering Ghosts.
-Vengeful Ghosts.
 
 Graphics Sprint 3
-Ghosts
+-Ghosts
+
+Sprint 4
+Bolt shooters
+Sound Manager with source specific sounds
+Music
+
 
 Later
 Particles when the fireball hits stuff.
@@ -56,6 +61,9 @@ Extinguish flame graphics
 Effects
 Zone that doesn't let you relight the flame
 Finalize Main Menu and Title
+Light Unlit torches with fire
+Teleporters
+Vengeful Ghosts.
 
 
 SFX Sprint

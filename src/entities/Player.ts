@@ -11,7 +11,7 @@ export class Player extends Entity {
     constructor(scene:Phaser.Scene, ih:IH) {
         super(scene, ih);
         this.gs.collideMap.push(this.sprite);
-        this.sprite.setSize(10,10);
+        this.sprite.setSize(9,10);
         this.sprite.name = 'player';
         this.sprite.setGravityY(C.GRAVITY);
         this.sprite.setDepth(150);
