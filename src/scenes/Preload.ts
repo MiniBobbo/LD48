@@ -59,7 +59,7 @@ export class Preload extends Phaser.Scene {
             percentText.destroy();
             assetText.destroy();
             //@ts-ignore
-            this.scene.start('game');
+            this.scene.start('menu');
         }, this);
     
         this.load.setBaseURL('./assets/')
@@ -95,7 +95,7 @@ export class Preload extends Phaser.Scene {
         IH.AssignKeyToVirtualInput('X', 'attack');
         IH.AssignKeyToVirtualInput('O', 'throw');
 
-        let r = this.renderer as Phaser.Renderer.WebGL.WebGLRenderer;
+        // let r = this.renderer as Phaser.Renderer.WebGL.WebGLRenderer;
         // r.pipelines.add('gray', new GrayScalePipeline(this.game));
 
         this.anims.create({ key: 'door_closed', frameRate: 60, frames: this.anims.generateFrameNames('atlas', { prefix: 'doors_closed_', end: 0}), repeat: -1 });

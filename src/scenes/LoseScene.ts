@@ -85,10 +85,10 @@ export class LoseScene extends Phaser.Scene {
 
         this.tweens.add( {
             targets:[this.buttons, this.win],
-            duration:500,
+            duration:1500,
             delay:350,
             y:-1000,
-            ease:'Quad.easeIn',
+            // ease:'Quad.easeIn',
 
             onComplete: () => {
                 // this.player.PlayAnimation('stand');
@@ -99,8 +99,8 @@ export class LoseScene extends Phaser.Scene {
         this.time.delayedCall(1200, () => {
             this.tweens.add( {
                 targets:[this.bg],
-                duration:200,
-                alpha:1,
+                duration:800,
+                alpha:0,
                 onComplete: () => {
                     this.scene.start('game');
                 }
@@ -114,6 +114,33 @@ export class LoseScene extends Phaser.Scene {
 
 
     MainMenu() {
+        this.events.emit('holdinput');
+
+        this.tweens.add( {
+            targets:[this.buttons, this.win],
+            duration:1000,
+            // delay:350,
+            y:1000,
+            // ease:'Quad.easeIn',
+
+            onComplete: () => {
+                // this.player.PlayAnimation('stand');
+                // this.scene.launch('win');
+            }
+        });
+
+        this.time.delayedCall(400, () => {
+            this.tweens.add( {
+                targets:[this.bg],
+                duration:1000,
+                alpha:0,
+                onComplete: () => {
+                    this.scene.start('menu');
+                }
+            });
+    
+        });
+
 
     }
 
@@ -122,5 +149,8 @@ export class LoseScene extends Phaser.Scene {
         this.ih.update();
         if(this.ih.IsJustPressed('left') || this.ih.IsJustPressed('right') ) {
             this.ReplayLevel();
+        }
+        if(this.ih.IsJustPressed('up')) {
+            this.MainMenu();
         }
     }}

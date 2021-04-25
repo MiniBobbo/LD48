@@ -32,6 +32,9 @@ export class GameScene extends Phaser.Scene {
             this.init();
         }
 
+        this.FlashText();
+        
+
         this.deathZones = [];
 
         this.cam = new CamObj(this);
@@ -55,6 +58,30 @@ export class GameScene extends Phaser.Scene {
 
         this.input.on('pointerdown', () => {
 
+        });
+
+    }
+    FlashText() {
+        let levelname = `Sublevel ${C.currentLevelNum}`;
+        let text = this.add.bitmapText(10,10, '8px', levelname).setScale(2).setScrollFactor(0).setAlpha(0).setDepth(300);
+        this.tweens.add( {
+            targets:[text],
+            duration:800,
+            alpha:1,
+            onComplete: () => {
+            }
+        });
+
+
+        this.time.delayedCall(4000, () => {
+            this.tweens.add( {
+                targets:[text],
+                duration:800,
+                alpha:0,
+                onComplete: () => {
+                }
+            });
+    
         });
 
     }
@@ -114,6 +141,7 @@ export class GameScene extends Phaser.Scene {
 
     PlayerWin() {
         console.log("Win");
+        C.lastCompleteTime = this.elapsedTime/1000;
         this.gs = GameState.WIN;
         this.events.emit('holdinput');
         this.flame.FlameOff();
@@ -149,8 +177,8 @@ export class GameScene extends Phaser.Scene {
             targets:[this.cam.image],
             x:this.player.sprite.x,
             y:this.player.sprite.y,
-            duration:1500,
-            ease:'Sine.easeInOut'
+            duration:2000,
+            ease:'Quad.easeInOut'
 
         });
 

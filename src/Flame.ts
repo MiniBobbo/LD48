@@ -19,7 +19,7 @@ export class Flame {
         // let pz:Phaser.GameObjects.Particles.Zones.RandomZone;
         let p = this.scene.add.particles('atlas').setPipeline('Light2D').setDepth(151);
 
-        this.collision = scene.physics.add.sprite(10,10, 'atlas',  'particles_1');
+        this.collision = scene.physics.add.sprite(-1000,-1000, 'atlas',  'particles_1');
         this.collision.setBounce(.3).setDragX(C.PLAYER_GROUND_DRAG);
 
         this.e = p.createEmitter({

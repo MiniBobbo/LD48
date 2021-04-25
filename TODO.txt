@@ -18,8 +18,8 @@ Graphics - DONE!!!
 - Menu Grahpics
 
 Sprint 1 - 
-CamObj
-Level Transitions
+- CamObj
+- Level Transitions
 - Torches
 - Spikes
 - Timer for levels
@@ -27,7 +27,7 @@ Total Time on Main Menu
 - Text in level editor
 - Reset on Death
 - Scene Resets without problems
-Level 2
+- Level 2
 
 Sprint 1 Graphics
 - Death animation

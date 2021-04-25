@@ -5,6 +5,7 @@ export class C {
     static currentLevel:string = 'Level_0';
     static currentLevelNum:number = 0;
     static lastGameState:GameState = GameState.GAME;
+    static lastCompleteTime:number = 0;
 
     static TILE_SIZE:number = 10;
     // static GRAVITY:number = 0;
@@ -20,12 +21,26 @@ export class C {
     static PLAYER_JUMP_TIME:number = 300;
     static PLAYER_THROW_X:number = 150;
     static PLAYER_THROW_Y:number = -100;
-    static MAX_LEVEL:number = 10;
+    static MAX_LEVEL:number = 2;
 
 
     static gd:GameData;
 
-    static GAME_NAME = 'InitialGame';
+    static GAME_NAME = 'Downwardgame';
+
+    static SaveGameData() {
+        localStorage.setItem(this.GAME_NAME, JSON.stringify(C.gd));
+    }
+
+    static LoadGameData() {
+        C.gd = JSON.parse(localStorage.getItem(this.GAME_NAME));
+        if(C.gd == null) {
+            C.gd = new GameData();
+            this.SaveGameData();
+        }
+
+
+    }
 
     static RoundToTile(x:number, y:number):{x:number, y:number} {
         let newX = 0;
