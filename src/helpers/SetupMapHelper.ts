@@ -29,8 +29,8 @@ export class SetupMapHelper {
             element.setPipeline('Light2D');
         });
 
+        // gs.cameras.main.setBounds(0,-2000, maps.collideLayer.width, 2000);
         // gs.cameras.main.setBounds(0,0, maps.collideLayer.width, maps.collideLayer.height);
-        gs.cameras.main.setBounds(0,0, 400, 400);
 
 
         this.CreateEntities(gs, maps);
@@ -65,10 +65,13 @@ export class SetupMapHelper {
         gs.player = new Player(gs, gs.ih);
         gs.player.sprite.setPosition(StartLocation.px[0], StartLocation.px[1] + 6);
         gs.player.sprite.alpha = 0;
-        gs.cameras.main.startFollow(gs.player.sprite);
+        // gs.cameras.main.startFollow(gs.player.sprite);
         gs.flame = new Flame(gs);
         gs.collideMap.push(gs.flame.collision);
         gs.events.emit('flameoff');
+        gs.cam.image.x = gs.player.sprite.x;
+        gs.cam.image.y = -1000;
+
 
 
     }
@@ -81,6 +84,36 @@ export class SetupMapHelper {
 
         gs.physics.add.overlap(gs.player.sprite, endzone , () => {  gs.events.emit('playerwin');});
 
+        let dl = maps.displayLayers.find((t:Phaser.Tilemaps.TilemapLayer) => t.name == 'Fg');
+        let tiles = dl.getTilesWithin(0,0,dl.width, dl.height);
+        tiles.forEach(element => {
+            if(element.index == 50) {
+                let dz = gs.add.zone(element.pixelX + 2, element.pixelY + 6, 6, 4);
+                gs.physics.world.enable(dz);
+                gs.deathZones.push(dz);
+            }
+            if(element.index == 69) {
+                let dz = gs.add.zone(element.pixelX + 6, element.pixelY + 2, 4, 6);
+                gs.physics.world.enable(dz);
+                gs.deathZones.push(dz);
+            }
+            if(element.index == 71) {
+                let dz = gs.add.zone(element.pixelX, element.pixelY + 2, 4, 6);
+                gs.physics.world.enable(dz);
+                gs.deathZones.push(dz);
+            }
+            if(element.index == 90) {
+                let dz = gs.add.zone(element.pixelX + 2, element.pixelY, 6, 4);
+                gs.physics.world.enable(dz);
+                gs.deathZones.push(dz);
+            }
+        });
+
+        gs.physics.add.overlap(gs.player.sprite, gs.deathZones , () => {  gs.events.emit('playerdead');});
+
+
+
     }
+
 
 }

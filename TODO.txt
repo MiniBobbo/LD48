@@ -18,10 +18,11 @@ Graphics - DONE!!!
 - Menu Grahpics
 
 Sprint 1 - 
+CamObj
 Level Transitions
-Torches
-Spikes
-Timer for levels
+- Torches
+- Spikes
+- Timer for levels
 Total Time on Main Menu
 - Text in level editor
 - Reset on Death

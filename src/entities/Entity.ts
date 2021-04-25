@@ -19,7 +19,8 @@ export class Entity {
 
     constructor(scene:Phaser.Scene, ih:IH) {
         this.gs = scene as GameScene;
-        this.sprite = scene.physics.add.sprite(0,0, 'atlas')
+        this.sprite = scene.physics.add.sprite(0,0, 'atlas', 'player_stand_0')
+        // .setPipeline('Light2D');
         this.sprite.setSize(16,16);
         this.scene = scene;
         this.sprite.name = '';
