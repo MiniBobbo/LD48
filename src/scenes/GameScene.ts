@@ -20,6 +20,8 @@ export class GameScene extends Phaser.Scene {
     elapsedTime:number = 0;
     elapsedTimeLabel:Phaser.GameObjects.BitmapText;
     deathZones:Array<Phaser.GameObjects.Zone>;
+    extinguishZones:Array<Phaser.GameObjects.Zone>;
+    soakZones:Array<Phaser.GameObjects.Zone>;
     cam:CamObj;
 
     preload() {
@@ -36,6 +38,8 @@ export class GameScene extends Phaser.Scene {
         
 
         this.deathZones = [];
+        this.extinguishZones = [];
+        this.soakZones = [];
 
         this.cam = new CamObj(this);
         this.cameras.main.startFollow(this.cam.image);

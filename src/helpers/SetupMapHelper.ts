@@ -1,3 +1,4 @@
+import { C } from "../C";
 import { Player } from "../entities/Player";
 import { Torch } from "../entities/Torch";
 import { Flame } from "../Flame";
@@ -55,6 +56,33 @@ export class SetupMapHelper {
                 .setPipeline('Light2D').setMaxWidth(element.width).setDepth(150);
             } else if (element.__identifier == 'Torch') {
                 let t = new Torch(gs, element);
+            } else if (element.__identifier == 'Waterfall') {
+                let w = gs.add.sprite(element.px[0], element.px[1], 'atlas', 'waterfall_falling_0').setPipeline('Light2D').setOrigin(0,0).setDepth(200);
+                w.play('waterfall_overflow');
+                let bottom:boolean = false;
+                let pos:{x:number, y:number} = {x:element.__grid[0], y:element.__grid[1]};
+                while(!bottom) {
+                    pos.y++;
+                    let index = maps.collideLayer.getTileAt(pos.x, pos.y).index;
+                    if(index == 2) {
+                        bottom = true;
+                        let w = gs.add.sprite(pos.x * C.TILE_SIZE, pos.y * C.TILE_SIZE, 'atlas', 'waterfall_falling_0').setPipeline('Light2D').setOrigin(0,0).setDepth(200);
+                        w.play('waterfall_hitting');
+                    } else if(index == 1) {
+                        bottom = true;
+                        let w = gs.add.sprite(pos.x * C.TILE_SIZE, (pos.y -1) * C.TILE_SIZE, 'atlas', 'waterfall_falling_0').setPipeline('Light2D').setOrigin(0,0).setDepth(200);
+                        w.play('waterfall_hitting');
+                    } else {
+                        let w = gs.add.sprite(pos.x * C.TILE_SIZE, (pos.y) * C.TILE_SIZE, 'atlas', 'waterfall_falling_0').setPipeline('Light2D').setOrigin(0,0).setDepth(200);
+                        w.play('waterfall_falling');
+
+                    }
+                }
+                let dz = gs.add.zone(element.px[0]+1, element.px[1] + 5, 8, (pos.y - element.__grid[1]) * C.TILE_SIZE).setOrigin(0,0);
+                gs.physics.world.enable(dz);
+                gs.extinguishZones.push(dz);
+                gs.soakZones.push(dz);
+
             }
         });
 
@@ -92,24 +120,38 @@ export class SetupMapHelper {
                 gs.physics.world.enable(dz);
                 gs.deathZones.push(dz);
             }
-            if(element.index == 69) {
+            else if(element.index == 69) {
                 let dz = gs.add.zone(element.pixelX + 8, element.pixelY + 4, 4, 7);
                 gs.physics.world.enable(dz);
                 gs.deathZones.push(dz);
             }
-            if(element.index == 71) {
+            else if(element.index == 71) {
                 let dz = gs.add.zone(element.pixelX+2, element.pixelY + 4, 4, 7);
                 gs.physics.world.enable(dz);
                 gs.deathZones.push(dz);
             }
-            if(element.index == 90) {
+            else if(element.index == 90) {
                 let dz = gs.add.zone(element.pixelX + 5, element.pixelY+2, 7, 4);
                 gs.physics.world.enable(dz);
                 gs.deathZones.push(dz);
             }
+            else if(element.index == 27) {
+                let dz = gs.add.zone(element.pixelX, element.pixelY + 5, 10,5).setOrigin(0,0);
+                gs.physics.world.enable(dz);
+                gs.deathZones.push(dz);
+                gs.extinguishZones.push(dz);
+            }
+            else if(element.index == 7) {
+                let dz = gs.add.zone(element.pixelX, element.pixelY + 6, 10,4).setOrigin(0,0);
+                gs.physics.world.enable(dz);
+                gs.extinguishZones.push(dz);
+            }
+
         });
 
+        gs.physics.add.overlap(gs.player.sprite, gs.soakZones , () => {  gs.events.emit('flameoff');});
         gs.physics.add.overlap(gs.player.sprite, gs.deathZones , () => {  gs.events.emit('playerdead');});
+        gs.physics.add.overlap(gs.flame.collision, gs.extinguishZones , () => {  gs.events.emit('flameoff');});
 
 
 
