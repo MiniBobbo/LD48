@@ -1,8 +1,10 @@
 import { GameData } from "./GameData";
+import { GameState } from "./scenes/GameScene";
 
 export class C {
     static currentLevel:string = 'Level_0';
     static currentLevelNum:number = 0;
+    static lastGameState:GameState = GameState.GAME;
 
     static TILE_SIZE:number = 10;
     // static GRAVITY:number = 0;

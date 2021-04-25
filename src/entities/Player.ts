@@ -3,7 +3,6 @@ import { IH } from "../IH/IH";
 import { C } from "../C";
 import { PlayerGround } from "../FSM/PlayerGround";
 import { PlayerAir } from "../FSM/PlayerAir";
-import { PlayerAttack } from "../FSM/PlayerAttack";
 import { PlayerGoToGround } from "../FSM/PlayerGoToGround";
 
 export class Player extends Entity {
@@ -22,7 +21,7 @@ export class Player extends Entity {
         this.PlayAnimation('run');
         this.fsm.addModule('ground', new PlayerGround(this));
         this.fsm.addModule('air', new PlayerAir(this));
-        this.fsm.addModule('attack', new PlayerAttack(this));
+        // this.fsm.addModule('attack', new PlayerAttack(this));
         this.fsm.addModule('gotoground', new PlayerGoToGround(this));
         this.fsm.changeModule('air');
 

@@ -97,7 +97,8 @@ export class GameScene extends Phaser.Scene {
     Shutdown() {
         this.flame.dispose();
         this.lights.destroy();
-        this.player.dispose();
+        if(this.player != null)
+            this.player.dispose();
         this.time.clearPendingEvents();
         this.collideMap = [];
         this.maps.dispose();
@@ -193,7 +194,7 @@ export class GameScene extends Phaser.Scene {
 
 }
 
-enum GameState {
+export enum GameState {
     GAME,
     WIN,
     LOSE,

@@ -88,22 +88,22 @@ export class SetupMapHelper {
         let tiles = dl.getTilesWithin(0,0,dl.width, dl.height);
         tiles.forEach(element => {
             if(element.index == 50) {
-                let dz = gs.add.zone(element.pixelX + 2, element.pixelY + 6, 6, 4);
+                let dz = gs.add.zone(element.pixelX + 5, element.pixelY + 8, 7, 4);
                 gs.physics.world.enable(dz);
                 gs.deathZones.push(dz);
             }
             if(element.index == 69) {
-                let dz = gs.add.zone(element.pixelX + 6, element.pixelY + 2, 4, 6);
+                let dz = gs.add.zone(element.pixelX + 8, element.pixelY + 4, 4, 7);
                 gs.physics.world.enable(dz);
                 gs.deathZones.push(dz);
             }
             if(element.index == 71) {
-                let dz = gs.add.zone(element.pixelX, element.pixelY + 2, 4, 6);
+                let dz = gs.add.zone(element.pixelX+2, element.pixelY + 4, 4, 7);
                 gs.physics.world.enable(dz);
                 gs.deathZones.push(dz);
             }
             if(element.index == 90) {
-                let dz = gs.add.zone(element.pixelX + 2, element.pixelY, 6, 4);
+                let dz = gs.add.zone(element.pixelX + 5, element.pixelY+2, 7, 4);
                 gs.physics.world.enable(dz);
                 gs.deathZones.push(dz);
             }

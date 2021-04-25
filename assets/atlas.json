@@ -5,8 +5,8 @@
 			"normalMap": "atlas_n.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 353,
-				"h": 249
+				"w": 447,
+				"h": 202
 			},
 			"scale": 1,
 			"frames": [
@@ -46,8 +46,8 @@
 						"h": 45
 					},
 					"frame": {
-						"x": 1,
-						"y": 203,
+						"x": 269,
+						"y": 1,
 						"w": 129,
 						"h": 45
 					}
@@ -67,8 +67,8 @@
 						"h": 45
 					},
 					"frame": {
-						"x": 1,
-						"y": 203,
+						"x": 269,
+						"y": 1,
 						"w": 129,
 						"h": 45
 					}
@@ -88,10 +88,31 @@
 						"h": 45
 					},
 					"frame": {
-						"x": 132,
-						"y": 203,
+						"x": 269,
+						"y": 48,
 						"w": 122,
 						"h": 45
+					}
+				},
+				{
+					"filename": "button2_0",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 40
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 40
+					},
+					"frame": {
+						"x": 269,
+						"y": 95,
+						"w": 50,
+						"h": 40
 					}
 				},
 				{
@@ -109,7 +130,7 @@
 						"h": 26
 					},
 					"frame": {
-						"x": 269,
+						"x": 400,
 						"y": 1,
 						"w": 29,
 						"h": 26
@@ -130,94 +151,10 @@
 						"h": 24
 					},
 					"frame": {
-						"x": 300,
-						"y": 1,
+						"x": 269,
+						"y": 137,
 						"w": 30,
 						"h": 24
-					}
-				},
-				{
-					"filename": "player_dead.png_27",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 53,
-						"y": 53,
-						"w": 27,
-						"h": 26
-					},
-					"frame": {
-						"x": 269,
-						"y": 29,
-						"w": 27,
-						"h": 26
-					}
-				},
-				{
-					"filename": "player_dead.png_14",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 51,
-						"y": 53,
-						"w": 28,
-						"h": 23
-					},
-					"frame": {
-						"x": 269,
-						"y": 57,
-						"w": 28,
-						"h": 23
-					}
-				},
-				{
-					"filename": "player_dead.png_15",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 51,
-						"y": 53,
-						"w": 28,
-						"h": 23
-					},
-					"frame": {
-						"x": 269,
-						"y": 82,
-						"w": 28,
-						"h": 23
-					}
-				},
-				{
-					"filename": "player_dead.png_13",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 51,
-						"y": 53,
-						"w": 28,
-						"h": 22
-					},
-					"frame": {
-						"x": 269,
-						"y": 107,
-						"w": 28,
-						"h": 22
 					}
 				},
 				{
@@ -235,8 +172,8 @@
 						"h": 22
 					},
 					"frame": {
-						"x": 269,
-						"y": 131,
+						"x": 321,
+						"y": 95,
 						"w": 32,
 						"h": 22
 					}
@@ -256,14 +193,14 @@
 						"h": 22
 					},
 					"frame": {
-						"x": 269,
-						"y": 155,
+						"x": 355,
+						"y": 95,
 						"w": 32,
 						"h": 22
 					}
 				},
 				{
-					"filename": "player_dead.png_18",
+					"filename": "player_dead.png_27",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -271,121 +208,16 @@
 						"h": 128
 					},
 					"spriteSourceSize": {
-						"x": 50,
+						"x": 53,
 						"y": 53,
-						"w": 30,
-						"h": 21
+						"w": 27,
+						"h": 26
 					},
 					"frame": {
 						"x": 269,
-						"y": 179,
-						"w": 30,
-						"h": 21
-					}
-				},
-				{
-					"filename": "doors_closed_0",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 20,
-						"h": 20
-					},
-					"spriteSourceSize": {
-						"x": 1,
-						"y": 1,
-						"w": 18,
-						"h": 15
-					},
-					"frame": {
-						"x": 332,
-						"y": 1,
-						"w": 18,
-						"h": 15
-					}
-				},
-				{
-					"filename": "player_dead.png_21",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 50,
-						"y": 52,
-						"w": 23,
-						"h": 22
-					},
-					"frame": {
-						"x": 256,
-						"y": 203,
-						"w": 23,
-						"h": 22
-					}
-				},
-				{
-					"filename": "player_dead.png_19",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 50,
-						"y": 53,
-						"w": 30,
-						"h": 21
-					},
-					"frame": {
-						"x": 256,
-						"y": 227,
-						"w": 30,
-						"h": 21
-					}
-				},
-				{
-					"filename": "player_dead.png_24",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 49,
-						"y": 52,
-						"w": 24,
-						"h": 22
-					},
-					"frame": {
-						"x": 281,
-						"y": 202,
-						"w": 24,
-						"h": 22
-					}
-				},
-				{
-					"filename": "player_dead.png_12",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 51,
-						"y": 54,
+						"y": 163,
 						"w": 27,
-						"h": 21
-					},
-					"frame": {
-						"x": 288,
-						"y": 226,
-						"w": 27,
-						"h": 21
+						"h": 26
 					}
 				},
 				{
@@ -403,14 +235,14 @@
 						"h": 20
 					},
 					"frame": {
-						"x": 300,
-						"y": 27,
+						"x": 400,
+						"y": 29,
 						"w": 30,
 						"h": 20
 					}
 				},
 				{
-					"filename": "player_dead.png_11",
+					"filename": "player_dead.png_18",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -418,104 +250,20 @@
 						"h": 128
 					},
 					"spriteSourceSize": {
-						"x": 52,
-						"y": 54,
-						"w": 26,
-						"h": 20
-					},
-					"frame": {
-						"x": 299,
-						"y": 49,
-						"w": 26,
-						"h": 20
-					}
-				},
-				{
-					"filename": "player_dead.png_10",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 52,
-						"y": 54,
-						"w": 25,
-						"h": 20
-					},
-					"frame": {
-						"x": 299,
-						"y": 71,
-						"w": 25,
-						"h": 20
-					}
-				},
-				{
-					"filename": "player_dead.png_9",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 52,
-						"y": 54,
-						"w": 25,
-						"h": 19
-					},
-					"frame": {
-						"x": 299,
-						"y": 93,
-						"w": 25,
-						"h": 19
-					}
-				},
-				{
-					"filename": "player_dead.png_4",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 54,
-						"y": 56,
-						"w": 21,
-						"h": 15
-					},
-					"frame": {
-						"x": 299,
-						"y": 114,
-						"w": 21,
-						"h": 15
-					}
-				},
-				{
-					"filename": "player_dead.png_26",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 53,
+						"x": 50,
 						"y": 53,
-						"w": 21,
-						"h": 19
+						"w": 30,
+						"h": 21
 					},
 					"frame": {
-						"x": 303,
-						"y": 131,
-						"w": 21,
-						"h": 19
+						"x": 321,
+						"y": 119,
+						"w": 30,
+						"h": 21
 					}
 				},
 				{
-					"filename": "player_dead.png_8",
+					"filename": "player_dead.png_19",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -523,205 +271,16 @@
 						"h": 128
 					},
 					"spriteSourceSize": {
-						"x": 53,
-						"y": 55,
-						"w": 24,
-						"h": 18
-					},
-					"frame": {
-						"x": 303,
-						"y": 152,
-						"w": 24,
-						"h": 18
-					}
-				},
-				{
-					"filename": "doors_open_0",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 20,
-						"h": 20
-					},
-					"spriteSourceSize": {
-						"x": 1,
-						"y": 1,
-						"w": 18,
-						"h": 15
-					},
-					"frame": {
-						"x": 332,
-						"y": 18,
-						"w": 18,
-						"h": 15
-					}
-				},
-				{
-					"filename": "player_dead.png_2",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 55,
-						"y": 57,
-						"w": 19,
-						"h": 14
-					},
-					"frame": {
-						"x": 332,
-						"y": 35,
-						"w": 19,
-						"h": 14
-					}
-				},
-				{
-					"filename": "player_dead.png_7",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 53,
-						"y": 55,
-						"w": 23,
-						"h": 17
-					},
-					"frame": {
-						"x": 329,
-						"y": 51,
-						"w": 23,
-						"h": 17
-					}
-				},
-				{
-					"filename": "player_dead.png_6",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 53,
-						"y": 55,
-						"w": 23,
-						"h": 16
-					},
-					"frame": {
-						"x": 329,
-						"y": 70,
-						"w": 23,
-						"h": 16
-					}
-				},
-				{
-					"filename": "player_dead.png_5",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 54,
-						"y": 55,
-						"w": 21,
-						"h": 16
-					},
-					"frame": {
-						"x": 326,
-						"y": 88,
-						"w": 21,
-						"h": 16
-					}
-				},
-				{
-					"filename": "player_dead.png_25",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 53,
-						"y": 57,
-						"w": 21,
-						"h": 14
-					},
-					"frame": {
-						"x": 326,
-						"y": 106,
-						"w": 21,
-						"h": 14
-					}
-				},
-				{
-					"filename": "player_dead.png_3",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 55,
-						"y": 57,
-						"w": 19,
-						"h": 14
-					},
-					"frame": {
-						"x": 303,
-						"y": 172,
-						"w": 19,
-						"h": 14
-					}
-				},
-				{
-					"filename": "player_dead.png_1",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 56,
-						"y": 57,
-						"w": 17,
-						"h": 15
-					},
-					"frame": {
-						"x": 326,
-						"y": 122,
-						"w": 17,
-						"h": 15
-					}
-				},
-				{
-					"filename": "player_dead.png_28",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 53,
+						"x": 50,
 						"y": 53,
-						"w": 12,
-						"h": 19
+						"w": 30,
+						"h": 21
 					},
 					"frame": {
-						"x": 329,
-						"y": 139,
-						"w": 12,
-						"h": 19
+						"x": 353,
+						"y": 119,
+						"w": 30,
+						"h": 21
 					}
 				},
 				{
@@ -739,8 +298,8 @@
 						"h": 14
 					},
 					"frame": {
-						"x": 329,
-						"y": 160,
+						"x": 431,
+						"y": 1,
 						"w": 15,
 						"h": 14
 					}
@@ -760,8 +319,8 @@
 						"h": 14
 					},
 					"frame": {
-						"x": 329,
-						"y": 160,
+						"x": 431,
+						"y": 1,
 						"w": 15,
 						"h": 14
 					}
@@ -781,8 +340,8 @@
 						"h": 14
 					},
 					"frame": {
-						"x": 329,
-						"y": 160,
+						"x": 431,
+						"y": 1,
 						"w": 15,
 						"h": 14
 					}
@@ -802,8 +361,8 @@
 						"h": 14
 					},
 					"frame": {
-						"x": 329,
-						"y": 160,
+						"x": 431,
+						"y": 1,
 						"w": 15,
 						"h": 14
 					}
@@ -823,8 +382,8 @@
 						"h": 14
 					},
 					"frame": {
-						"x": 329,
-						"y": 160,
+						"x": 431,
+						"y": 1,
 						"w": 15,
 						"h": 14
 					}
@@ -844,8 +403,8 @@
 						"h": 14
 					},
 					"frame": {
-						"x": 329,
-						"y": 160,
+						"x": 431,
+						"y": 1,
 						"w": 15,
 						"h": 14
 					}
@@ -865,14 +424,14 @@
 						"h": 14
 					},
 					"frame": {
-						"x": 329,
-						"y": 160,
+						"x": 431,
+						"y": 1,
 						"w": 15,
 						"h": 14
 					}
 				},
 				{
-					"filename": "player_dead.png_0",
+					"filename": "player_dead.png_14",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -880,20 +439,62 @@
 						"h": 128
 					},
 					"spriteSourceSize": {
-						"x": 56,
-						"y": 58,
-						"w": 17,
-						"h": 14
+						"x": 51,
+						"y": 53,
+						"w": 28,
+						"h": 23
 					},
 					"frame": {
-						"x": 324,
-						"y": 176,
-						"w": 17,
-						"h": 14
+						"x": 393,
+						"y": 51,
+						"w": 28,
+						"h": 23
 					}
 				},
 				{
-					"filename": "player_dead.png_29",
+					"filename": "player_dead.png_21",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 50,
+						"y": 52,
+						"w": 23,
+						"h": 22
+					},
+					"frame": {
+						"x": 423,
+						"y": 51,
+						"w": 23,
+						"h": 22
+					}
+				},
+				{
+					"filename": "player_dead.png_13",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 51,
+						"y": 53,
+						"w": 28,
+						"h": 22
+					},
+					"frame": {
+						"x": 393,
+						"y": 76,
+						"w": 28,
+						"h": 22
+					}
+				},
+				{
+					"filename": "player_dead.png_7",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -902,19 +503,82 @@
 					},
 					"spriteSourceSize": {
 						"x": 53,
-						"y": 68,
-						"w": 3,
-						"h": 4
+						"y": 55,
+						"w": 23,
+						"h": 17
 					},
 					"frame": {
-						"x": 349,
-						"y": 88,
-						"w": 3,
-						"h": 4
+						"x": 423,
+						"y": 75,
+						"w": 23,
+						"h": 17
 					}
 				},
 				{
-					"filename": "torch_0",
+					"filename": "player_dead.png_6",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 53,
+						"y": 55,
+						"w": 23,
+						"h": 16
+					},
+					"frame": {
+						"x": 423,
+						"y": 94,
+						"w": 23,
+						"h": 16
+					}
+				},
+				{
+					"filename": "player_dead.png_15",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 51,
+						"y": 53,
+						"w": 28,
+						"h": 23
+					},
+					"frame": {
+						"x": 389,
+						"y": 100,
+						"w": 28,
+						"h": 23
+					}
+				},
+				{
+					"filename": "player_dead.png_12",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 51,
+						"y": 54,
+						"w": 27,
+						"h": 21
+					},
+					"frame": {
+						"x": 419,
+						"y": 112,
+						"w": 27,
+						"h": 21
+					}
+				},
+				{
+					"filename": "doors_closed_0",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -922,78 +586,267 @@
 						"h": 20
 					},
 					"spriteSourceSize": {
-						"x": 7,
-						"y": 6,
-						"w": 6,
-						"h": 9
+						"x": 1,
+						"y": 1,
+						"w": 18,
+						"h": 15
 					},
 					"frame": {
 						"x": 301,
-						"y": 188,
-						"w": 6,
-						"h": 9
+						"y": 137,
+						"w": 18,
+						"h": 15
 					}
 				},
 				{
-					"filename": "player_dead_1",
+					"filename": "player_dead.png_11",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 32,
-						"h": 32
+						"w": 128,
+						"h": 128
 					},
 					"spriteSourceSize": {
-						"x": 9,
-						"y": 9,
-						"w": 12,
-						"h": 14
+						"x": 52,
+						"y": 54,
+						"w": 26,
+						"h": 20
 					},
 					"frame": {
-						"x": 309,
-						"y": 188,
-						"w": 12,
-						"h": 14
+						"x": 385,
+						"y": 125,
+						"w": 26,
+						"h": 20
 					}
 				},
 				{
-					"filename": "player_dead_0",
+					"filename": "player_dead.png_10",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 32,
-						"h": 32
+						"w": 128,
+						"h": 128
 					},
 					"spriteSourceSize": {
-						"x": 7,
-						"y": 9,
+						"x": 52,
+						"y": 54,
+						"w": 25,
+						"h": 20
+					},
+					"frame": {
+						"x": 321,
+						"y": 142,
+						"w": 25,
+						"h": 20
+					}
+				},
+				{
+					"filename": "player_dead.png_24",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 49,
+						"y": 52,
+						"w": 24,
+						"h": 22
+					},
+					"frame": {
+						"x": 348,
+						"y": 142,
+						"w": 24,
+						"h": 22
+					}
+				},
+				{
+					"filename": "doors_open_0",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 18,
+						"h": 15
+					},
+					"frame": {
+						"x": 301,
+						"y": 154,
+						"w": 18,
+						"h": 15
+					}
+				},
+				{
+					"filename": "player_dead.png_26",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 53,
+						"y": 53,
+						"w": 21,
+						"h": 19
+					},
+					"frame": {
+						"x": 298,
+						"y": 171,
+						"w": 21,
+						"h": 19
+					}
+				},
+				{
+					"filename": "player_dead.png_9",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 52,
+						"y": 54,
+						"w": 25,
+						"h": 19
+					},
+					"frame": {
+						"x": 321,
+						"y": 164,
+						"w": 25,
+						"h": 19
+					}
+				},
+				{
+					"filename": "player_dead.png_5",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 54,
+						"y": 55,
+						"w": 21,
+						"h": 16
+					},
+					"frame": {
+						"x": 321,
+						"y": 185,
+						"w": 21,
+						"h": 16
+					}
+				},
+				{
+					"filename": "player_dead.png_8",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 53,
+						"y": 55,
+						"w": 24,
+						"h": 18
+					},
+					"frame": {
+						"x": 348,
+						"y": 166,
+						"w": 24,
+						"h": 18
+					}
+				},
+				{
+					"filename": "player_dead.png_4",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 54,
+						"y": 56,
+						"w": 21,
+						"h": 15
+					},
+					"frame": {
+						"x": 344,
+						"y": 186,
+						"w": 21,
+						"h": 15
+					}
+				},
+				{
+					"filename": "player_dead.png_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 56,
+						"y": 57,
 						"w": 17,
+						"h": 15
+					},
+					"frame": {
+						"x": 367,
+						"y": 186,
+						"w": 17,
+						"h": 15
+					}
+				},
+				{
+					"filename": "player_dead.png_25",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 53,
+						"y": 57,
+						"w": 21,
 						"h": 14
 					},
 					"frame": {
-						"x": 323,
-						"y": 192,
-						"w": 17,
+						"x": 413,
+						"y": 135,
+						"w": 21,
 						"h": 14
 					}
 				},
 				{
-					"filename": "player_dead_2",
+					"filename": "player_dead.png_2",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
-						"w": 32,
-						"h": 32
+						"w": 128,
+						"h": 128
 					},
 					"spriteSourceSize": {
-						"x": 9,
-						"y": 9,
-						"w": 12,
+						"x": 55,
+						"y": 57,
+						"w": 19,
 						"h": 14
 					},
 					"frame": {
-						"x": 307,
-						"y": 204,
-						"w": 12,
+						"x": 374,
+						"y": 147,
+						"w": 19,
 						"h": 14
 					}
 				},
@@ -1012,9 +865,114 @@
 						"h": 14
 					},
 					"frame": {
-						"x": 321,
-						"y": 208,
+						"x": 395,
+						"y": 147,
 						"w": 16,
+						"h": 14
+					}
+				},
+				{
+					"filename": "player_dead.png_3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 55,
+						"y": 57,
+						"w": 19,
+						"h": 14
+					},
+					"frame": {
+						"x": 374,
+						"y": 163,
+						"w": 19,
+						"h": 14
+					}
+				},
+				{
+					"filename": "player_dead.png_0",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 56,
+						"y": 58,
+						"w": 17,
+						"h": 14
+					},
+					"frame": {
+						"x": 395,
+						"y": 163,
+						"w": 17,
+						"h": 14
+					}
+				},
+				{
+					"filename": "player_dead.png_28",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 53,
+						"y": 53,
+						"w": 12,
+						"h": 19
+					},
+					"frame": {
+						"x": 386,
+						"y": 179,
+						"w": 12,
+						"h": 19
+					}
+				},
+				{
+					"filename": "arrow",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 16,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 0,
+						"w": 13,
+						"h": 16
+					},
+					"frame": {
+						"x": 400,
+						"y": 179,
+						"w": 13,
+						"h": 16
+					}
+				},
+				{
+					"filename": "player_dead_0",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 9,
+						"w": 17,
+						"h": 14
+					},
+					"frame": {
+						"x": 414,
+						"y": 151,
+						"w": 17,
 						"h": 14
 					}
 				},
@@ -1033,9 +991,51 @@
 						"h": 14
 					},
 					"frame": {
-						"x": 317,
-						"y": 224,
+						"x": 415,
+						"y": 167,
 						"w": 16,
+						"h": 14
+					}
+				},
+				{
+					"filename": "player_dead_1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 9,
+						"w": 12,
+						"h": 14
+					},
+					"frame": {
+						"x": 415,
+						"y": 183,
+						"w": 12,
+						"h": 14
+					}
+				},
+				{
+					"filename": "player_dead_2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 9,
+						"y": 9,
+						"w": 12,
+						"h": 14
+					},
+					"frame": {
+						"x": 429,
+						"y": 183,
+						"w": 12,
 						"h": 14
 					}
 				},
@@ -1054,8 +1054,8 @@
 						"h": 14
 					},
 					"frame": {
-						"x": 335,
-						"y": 224,
+						"x": 433,
+						"y": 151,
 						"w": 12,
 						"h": 14
 					}
@@ -1075,10 +1075,52 @@
 						"h": 14
 					},
 					"frame": {
-						"x": 339,
-						"y": 208,
+						"x": 433,
+						"y": 167,
 						"w": 12,
 						"h": 14
+					}
+				},
+				{
+					"filename": "torch_0",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 20,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 6,
+						"w": 6,
+						"h": 9
+					},
+					"frame": {
+						"x": 431,
+						"y": 17,
+						"w": 6,
+						"h": 9
+					}
+				},
+				{
+					"filename": "player_dead.png_30",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 52,
+						"y": 69,
+						"w": 4,
+						"h": 3
+					},
+					"frame": {
+						"x": 374,
+						"y": 142,
+						"w": 4,
+						"h": 3
 					}
 				},
 				{
@@ -1096,8 +1138,8 @@
 						"h": 3
 					},
 					"frame": {
-						"x": 349,
-						"y": 94,
+						"x": 380,
+						"y": 142,
 						"w": 3,
 						"h": 3
 					}
@@ -1117,10 +1159,31 @@
 						"h": 3
 					},
 					"frame": {
-						"x": 349,
-						"y": 94,
+						"x": 380,
+						"y": 142,
 						"w": 3,
 						"h": 3
+					}
+				},
+				{
+					"filename": "player_dead.png_29",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 128,
+						"h": 128
+					},
+					"spriteSourceSize": {
+						"x": 53,
+						"y": 68,
+						"w": 3,
+						"h": 4
+					},
+					"frame": {
+						"x": 443,
+						"y": 183,
+						"w": 3,
+						"h": 4
 					}
 				},
 				{
@@ -1138,8 +1201,8 @@
 						"h": 3
 					},
 					"frame": {
-						"x": 349,
-						"y": 99,
+						"x": 443,
+						"y": 189,
 						"w": 3,
 						"h": 3
 					}
@@ -1159,8 +1222,8 @@
 						"h": 3
 					},
 					"frame": {
-						"x": 349,
-						"y": 99,
+						"x": 443,
+						"y": 189,
 						"w": 3,
 						"h": 3
 					}
@@ -1180,8 +1243,8 @@
 						"h": 3
 					},
 					"frame": {
-						"x": 349,
-						"y": 99,
+						"x": 443,
+						"y": 189,
 						"w": 3,
 						"h": 3
 					}
@@ -1201,8 +1264,8 @@
 						"h": 3
 					},
 					"frame": {
-						"x": 349,
-						"y": 104,
+						"x": 443,
+						"y": 194,
 						"w": 3,
 						"h": 3
 					}
@@ -1222,8 +1285,8 @@
 						"h": 2
 					},
 					"frame": {
-						"x": 322,
-						"y": 114,
+						"x": 389,
+						"y": 95,
 						"w": 2,
 						"h": 2
 					}
@@ -1243,8 +1306,8 @@
 						"h": 2
 					},
 					"frame": {
-						"x": 324,
-						"y": 172,
+						"x": 419,
+						"y": 100,
 						"w": 2,
 						"h": 2
 					}
@@ -1264,31 +1327,10 @@
 						"h": 2
 					},
 					"frame": {
-						"x": 322,
-						"y": 118,
+						"x": 385,
+						"y": 119,
 						"w": 2,
 						"h": 2
-					}
-				},
-				{
-					"filename": "player_dead.png_30",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 128,
-						"h": 128
-					},
-					"spriteSourceSize": {
-						"x": 52,
-						"y": 69,
-						"w": 4,
-						"h": 3
-					},
-					"frame": {
-						"x": 317,
-						"y": 240,
-						"w": 4,
-						"h": 3
 					}
 				}
 			]
@@ -1297,6 +1339,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:df6995b58da0a0e4b8f5f6a608672c54:863501aab15780a6364734adee8744f5:0fa6ba49f102de34a1260816cef426e4$"
+		"smartupdate": "$TexturePacker:SmartUpdate:9a3f9da21c89c52fc89321d99b2c3eab:51f00776f21c31579882efdec48fbc9e:0fa6ba49f102de34a1260816cef426e4$"
 	}
 }
