@@ -10,9 +10,6 @@ export class Player extends Entity {
     light:Phaser.GameObjects.Light;
     constructor(scene:Phaser.Scene, ih:IH) {
         super(scene, ih);
-        this.hp = 5;
-        this.maxhp = 5;
-        this.flashTime = 1000;
         this.gs.collideMap.push(this.sprite);
         this.sprite.setSize(10,10);
         this.sprite.name = 'player';
@@ -76,7 +73,8 @@ export class Player extends Entity {
 
     dispose() {
         console.log('Player Disposed');
-        this.sprite.removeListener('flamereset', this.FlameReset, this);
+        if(this.sprite != null)
+            this.sprite.removeListener('flamereset', this.FlameReset, this);
         // this.sprite.destroy();
         super.dispose();
 

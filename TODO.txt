@@ -42,14 +42,21 @@ Sprint 2
 - Level 3
 
 Sprint 3
-Ghosts that run away from the light but will kill you if they hit you.
-Wandering Ghosts.
+- Ghosts that run away from the light but will kill you if they hit you.
+- Wandering Ghosts.
 Vengeful Ghosts.
+
+Graphics Sprint 3
+Ghosts
 
 Later
 Particles when the fireball hits stuff.
 Smoother camera transitions when fire goes out.
 Extinguish flame graphics 
 Effects
+Zone that doesn't let you relight the flame
 
 
+SFX Sprint
+
+Music Sprint

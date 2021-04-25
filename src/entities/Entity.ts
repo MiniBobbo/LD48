@@ -29,6 +29,9 @@ export class Entity {
         this.fsm.addModule('nothing', new NothingFSM(this));
         this.ih = ih;
 
+        this.gs.entities.push(this);
+
+
         this.sprite.on('damage', this.Damage, this);
         this.sprite.on('stun', this.Stun, this);
         this.sprite.on('dead', this.Dead, this);
@@ -43,7 +46,8 @@ export class Entity {
         this.scene.events.removeListener('update',this.Update, this)
         this.scene.events.removeListener('travel',() => {this.fsm.clearModule();}, this);
         this.fsm.dispose();
-        this.sprite.destroy();
+        if(this.sprite != null)
+            this.sprite.destroy();
         this.sprite = null;
     }
 

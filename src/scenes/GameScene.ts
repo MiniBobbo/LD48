@@ -1,6 +1,7 @@
 import { Game } from "phaser";
 import { C } from "../C";
 import { CamObj } from "../CamObj";
+import { Entity } from "../entities/Entity";
 import { Player } from "../entities/Player";
 import { Flame } from "../Flame";
 import { SetupMapHelper } from "../helpers/SetupMapHelper";
@@ -23,6 +24,8 @@ export class GameScene extends Phaser.Scene {
     extinguishZones:Array<Phaser.GameObjects.Zone>;
     soakZones:Array<Phaser.GameObjects.Zone>;
     cam:CamObj;
+    dangerSprites:Array<Phaser.Physics.Arcade.Sprite>;
+    entities:Array<Entity>;
 
     preload() {
         this.ih = new IH(this);
@@ -40,6 +43,8 @@ export class GameScene extends Phaser.Scene {
         this.deathZones = [];
         this.extinguishZones = [];
         this.soakZones = [];
+        this.dangerSprites = [];
+        this.entities = [];
 
         this.cam = new CamObj(this);
         this.cameras.main.startFollow(this.cam.image);
@@ -141,6 +146,9 @@ export class GameScene extends Phaser.Scene {
             element.destroy();
         });
         this.deathZones = [];
+        this.entities.forEach(element => {
+            element.dispose();
+        });
     }
 
     PlayerWin() {

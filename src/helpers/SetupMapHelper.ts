@@ -1,4 +1,5 @@
 import { C } from "../C";
+import { Ghost } from "../entities/Ghost";
 import { Player } from "../entities/Player";
 import { Torch } from "../entities/Torch";
 import { Flame } from "../Flame";
@@ -56,6 +57,10 @@ export class SetupMapHelper {
                 .setPipeline('Light2D').setMaxWidth(element.width).setDepth(150);
             } else if (element.__identifier == 'Torch') {
                 let t = new Torch(gs, element);
+            } else if (element.__identifier == 'Ghost') {
+                let g = new Ghost(gs, gs.ih);
+                g.sprite.setPosition(element.px[0], element.px[1]);
+                gs.dangerSprites.push(g.sprite);
             } else if (element.__identifier == 'Waterfall') {
                 let w = gs.add.sprite(element.px[0], element.px[1], 'atlas', 'waterfall_falling_0').setPipeline('Light2D').setOrigin(0,0).setDepth(200);
                 w.play('waterfall_overflow');
@@ -150,6 +155,7 @@ export class SetupMapHelper {
         });
 
         gs.physics.add.overlap(gs.player.sprite, gs.soakZones , () => {  gs.events.emit('flameoff');});
+        gs.physics.add.overlap(gs.player.sprite, gs.dangerSprites , () => {  gs.events.emit('playerdead');});
         gs.physics.add.overlap(gs.player.sprite, gs.deathZones , () => {  gs.events.emit('playerdead');});
         gs.physics.add.overlap(gs.flame.collision, gs.extinguishZones , () => {  gs.events.emit('flameoff');});
 
