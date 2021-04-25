@@ -13,7 +13,7 @@ export class MainMenuScene extends Phaser.Scene {
         C.LoadGameData();
         this.buttons = this.add.group().setOrigin(0,0);
 
-        for(let i = 1; i <= C.MAX_LEVEL; i++) {
+        for(let i = 0; i <= C.MAX_LEVEL; i++) {
             this.buttons.add(this.CreateButton(i));
         }
 

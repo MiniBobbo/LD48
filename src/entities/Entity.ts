@@ -15,6 +15,7 @@ export class Entity {
     flashing:boolean = false;
     flashingRemaining:number = 0;
     flashTime:number = 200;
+    lit:boolean = false;
 
 
     constructor(scene:Phaser.Scene, ih:IH) {

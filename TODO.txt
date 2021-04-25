@@ -55,6 +55,7 @@ Smoother camera transitions when fire goes out.
 Extinguish flame graphics 
 Effects
 Zone that doesn't let you relight the flame
+Finalize Main Menu and Title
 
 
 SFX Sprint

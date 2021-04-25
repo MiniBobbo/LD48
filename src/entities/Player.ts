@@ -80,5 +80,17 @@ export class Player extends Entity {
 
     }
 
+    PlayAnimation(anim:string, ignoreIfPlaying:boolean = true) {
+        let combinedAnim = `${this.sprite.name}_${anim}`;
+        if(this.holdingLight)
+            combinedAnim += '_hold';
+        if(ignoreIfPlaying && combinedAnim == this.lastAnim)
+            return;
+        this.sprite.anims.play(combinedAnim, ignoreIfPlaying);
+        this.sprite.setOffset(this.sprite.width/2 - this.sprite.body.width/2, this.sprite.height/2- this.sprite.body.height/2);
+        this.lastAnim = combinedAnim;
+    }
+
+
 
 }

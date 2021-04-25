@@ -100,16 +100,21 @@ export class Preload extends Phaser.Scene {
 
         this.anims.create({ key: 'door_closed', frameRate: 60, frames: this.anims.generateFrameNames('atlas', { prefix: 'doors_closed_', end: 0}), repeat: -1 });
         this.anims.create({ key: 'door_open', frameRate: 60, frames: this.anims.generateFrameNames('atlas', { prefix: 'doors_open_', end: 0}), repeat: -1 });
-        this.anims.create({ key: 'player_stand', frameRate: 60, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_stand_', end: 0}), repeat: -1 });
         this.anims.create({ key: 'ghost_float', frameRate: 6, frames: this.anims.generateFrameNames('atlas', { prefix: 'ghosts_float_', end: 3}), repeat: -1 });
         this.anims.create({ key: 'waterfall_overflow', frameRate: 6, frames: this.anims.generateFrameNames('atlas', { prefix: 'waterfall_overflow_', end: 3}), repeat: -1 });
         this.anims.create({ key: 'waterfall_falling', frameRate: 6, frames: this.anims.generateFrameNames('atlas', { prefix: 'waterfall_falling_', end: 3}), repeat: -1 });
         this.anims.create({ key: 'waterfall_hitting', frameRate: 6, frames: this.anims.generateFrameNames('atlas', { prefix: 'waterfall_hitting_', end: 3}), repeat: -1 });
-        this.anims.create({ key: 'player_run', frameRate: 6, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_run_', end: 3}), repeat: -1 });
-        this.anims.create({ key: 'player_walktowards', frameRate: 3, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_walktowards_', end: 1}), repeat: -1 });
+        this.anims.create({ key: 'player_stand', frameRate: 60, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_stand_', end: 0}), repeat: -1 });
+        this.anims.create({ key: 'player_stand_hold', frameRate: 60, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_stand_hold_', end: 0}), repeat: -1 });
+        this.anims.create({ key: 'player_run', frameRate: 10, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_run_', end: 5}), repeat: -1 });
+        this.anims.create({ key: 'player_run_hold', frameRate: 10, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_run_hold_', end: 5}), repeat: -1 });
+        // this.anims.create({ key: 'player_walktowards', frameRate: 3, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_walktowards_', end: 1}), repeat: -1 });
         this.anims.create({ key: 'player_jumpup', frameRate: 20, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_jumpup_', end: 0}), repeat: -1 });
+        this.anims.create({ key: 'player_jumpup_hold', frameRate: 20, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_jumpup_hold_', end: 0}), repeat: -1 });
         this.anims.create({ key: 'player_dead', frameRate: 60, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_dead.png_', end: 36}), repeat: 0 });
-        this.anims.create({ key: 'player_jumpdown', frameRate: 20, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_jumpdown_', end: 0}), repeat: 0 });
+        this.anims.create({ key: 'player_dead_hold', frameRate: 60, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_dead.png_', end: 36}), repeat: 0 });
+        this.anims.create({ key: 'player_jumpdown', frameRate: 2, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_jumpdown_', end: 1}), repeat: 0 });
+        this.anims.create({ key: 'player_jumpdown_hold', frameRate: 2, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_jumpdown_hold_', end: 1}), repeat: 0 });
 
     }
 }

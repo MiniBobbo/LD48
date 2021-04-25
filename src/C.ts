@@ -9,18 +9,18 @@ export class C {
 
     static TILE_SIZE:number = 10;
     // static GRAVITY:number = 0;
-    static GRAVITY:number = 1000;
+    static GRAVITY:number = 600;
     static MAX_Y_SPEED:number = 500;
-    static PLAYER_GROUND_SPEED:number = 100;
-    static PLAYER_AIR_SPEED:number = 100;
+    static PLAYER_GROUND_SPEED:number = 80;
+    static PLAYER_AIR_SPEED:number = 80;
     static PLAYER_GROUND_ACCEL:number = 400;
     static PLAYER_AIR_ACCEL:number = 400;
     static PLAYER_GROUND_DRAG:number = 400;
     static PLAYER_AIR_DRAG:number = 400;
-    static PLAYER_JUMP_STR:number = 200;
-    static PLAYER_JUMP_TIME:number = 300;
-    static PLAYER_THROW_X:number = 150;
-    static PLAYER_THROW_Y:number = -100;
+    static PLAYER_JUMP_STR:number = 150;
+    static PLAYER_JUMP_TIME:number = 200;
+    static PLAYER_THROW_X:number = 100;
+    static PLAYER_THROW_Y:number = -75;
     static MAX_LEVEL:number = 3;
 
 
