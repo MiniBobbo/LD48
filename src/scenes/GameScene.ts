@@ -55,7 +55,7 @@ export class GameScene extends Phaser.Scene {
         this.cam.image
 
         this.elapsedTime = 0;
-        this.elapsedTimeLabel = this.add.bitmapText(1,1,'8px', '').setScrollFactor(0,0).setDepth(300);
+        this.elapsedTimeLabel = this.add.bitmapText(1,1,'8px', '').setScrollFactor(0,0).setDepth(300).setVisible(false);
         this.gs = GameState.START;
         this.endLocation = {x:0, y:0};
         let r = new LdtkReader(this,this.cache.json.get('levels'));

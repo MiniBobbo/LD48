@@ -1,4 +1,5 @@
 import { C } from "../C";
+import { Bolter } from "../entities/Bolter";
 import { Ghost } from "../entities/Ghost";
 import { Player } from "../entities/Player";
 import { Torch } from "../entities/Torch";
@@ -57,8 +58,8 @@ export class SetupMapHelper {
                 .setPipeline('Light2D').setMaxWidth(element.width).setDepth(150).setCenterAlign();
             } else if (element.__identifier == 'Torch') {
                 let t = new Torch(gs, element);
-            } else if (element.__identifier == 'Bolter') {
-                let t = new Torch(gs, element);
+            } else if (element.__identifier == 'Bolters') {
+                let t = new Bolter(gs, gs.ih, element);
             } else if (element.__identifier == 'Ghost') {
                 let g = new Ghost(gs, gs.ih);
                 if(!element.fieldInstances[0].__value) {

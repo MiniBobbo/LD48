@@ -23,7 +23,7 @@ export class C {
     static PLAYER_THROW_Y:number = -75;
     static PLAYER_THROW_UP:{x:number, y:number} = {x:20, y: -150};
     static PLAYER_THROW_DOWN:{x:number, y:number} = {x:20, y: -20};
-    static MAX_LEVEL:number = 7;
+    static MAX_LEVEL:number = 8;
 
 
     static gd:GameData;
@@ -36,10 +36,10 @@ export class C {
 
     static LoadGameData() {
         C.gd = JSON.parse(localStorage.getItem(this.GAME_NAME));
-        if(C.gd.times.length <= C.MAX_LEVEL)
-            C.gd = null;
         if(C.gd == null) {
             C.gd = new GameData();
+        if(C.gd.times.length <= C.MAX_LEVEL)
+            C.gd = null;
             this.SaveGameData();
         }
 
