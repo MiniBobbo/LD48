@@ -23,7 +23,7 @@ export class C {
     static PLAYER_THROW_Y:number = -75;
     static PLAYER_THROW_UP:{x:number, y:number} = {x:20, y: -150};
     static PLAYER_THROW_DOWN:{x:number, y:number} = {x:20, y: -20};
-    static MAX_LEVEL:number = 6;
+    static MAX_LEVEL:number = 7;
 
 
     static gd:GameData;

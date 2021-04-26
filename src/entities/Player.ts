@@ -4,6 +4,8 @@ import { C } from "../C";
 import { PlayerGround } from "../FSM/PlayerGround";
 import { PlayerAir } from "../FSM/PlayerAir";
 import { PlayerGoToGround } from "../FSM/PlayerGoToGround";
+import { PlayerThrow } from "../FSM/PlayerThrow";
+import { SOUND } from "../Sounds";
 
 export class Player extends Entity {
     holdingLight:boolean = false;
@@ -16,6 +18,7 @@ export class Player extends Entity {
         this.sprite.setGravityY(C.GRAVITY);
         this.sprite.setDepth(150);
         this.PlayAnimation('run');
+        this.fsm.addModule('throw', new PlayerThrow(this));
         this.fsm.addModule('ground', new PlayerGround(this));
         this.fsm.addModule('air', new PlayerAir(this));
         // this.fsm.addModule('attack', new PlayerAttack(this));
@@ -60,6 +63,9 @@ export class Player extends Entity {
     }
 
     ThrowLight() {
+        this.changeFSM('throw');
+        this.gs.events.emit('sound', SOUND.THROW);
+
         this.gs.flame.thrown = true;
         this.holdingLight = false;
         this.gs.flame.collision.setPosition(this.gs.flame.light.x, this.sprite.y);

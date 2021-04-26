@@ -57,12 +57,15 @@ export class SetupMapHelper {
                 .setPipeline('Light2D').setMaxWidth(element.width).setDepth(150).setCenterAlign();
             } else if (element.__identifier == 'Torch') {
                 let t = new Torch(gs, element);
+            } else if (element.__identifier == 'Bolter') {
+                let t = new Torch(gs, element);
             } else if (element.__identifier == 'Ghost') {
                 let g = new Ghost(gs, gs.ih);
                 if(!element.fieldInstances[0].__value) {
                     g.CollideMap();
                 } else {
                     g.fsm.changeModule('angrywait');
+                    g.sprite.setAlpha(.6);
                 }
                 g.sprite.setPosition(element.px[0], element.px[1]);
                 gs.dangerSprites.push(g.sprite);

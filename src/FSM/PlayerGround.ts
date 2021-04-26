@@ -2,6 +2,7 @@ import { FSMModule } from "./FSMModule";
 import { IH } from "../IH/IH";
 import { C } from "../C";
 import { Entity } from "../entities/Entity";
+import { SOUND } from "../Sounds";
 
 export class PlayerGround extends FSMModule {
     e!:Entity;
@@ -12,9 +13,20 @@ export class PlayerGround extends FSMModule {
         this.ih = this.e.ih;
         this.e.sprite.setMaxVelocity(C.PLAYER_GROUND_SPEED, C.MAX_Y_SPEED);
         this.e.sprite.setDragX(C.PLAYER_GROUND_DRAG);
+
+        this.e.sprite.on('animationupdate', this.PlayAnimationSound, this);
+    }
+
+    PlayAnimationSound(animation, frame, gameobject, framekey:string) {
+        let c = framekey.slice(-1);
+        if(c == '2' || c == '5') {
+            this.e.gs.events.emit('sound', SOUND.STEP);
+
+        }
     }
 
     moduleEnd() {
+        this.e.sprite.removeListener('animationupdate', this.PlayAnimationSound, this);
 
     }
 
@@ -37,6 +49,7 @@ export class PlayerGround extends FSMModule {
             ax++;
         if(ih.IsJustPressed('jump')) {
             this.parent.changeFSM('air');
+            this.e.gs.events.emit('sound', SOUND.JUMP);
             this.e.sprite.setVelocityY(-C.PLAYER_JUMP_STR);
             this.e.sprite.y -= 1;
             this.e.sprite.body.touching.down = false;

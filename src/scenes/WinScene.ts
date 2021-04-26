@@ -14,40 +14,40 @@ export class WinScene extends Phaser.Scene {
         this.win = this.add.container().setDepth(300);
         let g = this.add.graphics();
         var color = 0x000000;
-        var alpha = 0.8;
+        var alpha = 0.0;
     
         g.fillStyle(color, alpha);
         g.fillRect(-115, 10, 230, 90);
         this.win.add(g);
-        let winText = `Sublevel ${C.currentLevelNum} Completed!\nFinished in: ${C.lastCompleteTime.toFixed(2)}\n`;
+        let winText = `Sublevel ${C.currentLevelNum} Completed\nGoing deeper...\n`;
         if(C.gd.times[C.currentLevelNum] == 0 || C.lastCompleteTime < C.gd.times[C.currentLevelNum]) {
-            winText += '**New Record**';
+            // winText += '**New Record**';
             C.gd.times[C.currentLevelNum] = C.lastCompleteTime;
             localStorage.setItem(C.GAME_NAME, JSON.stringify(C.gd));
         } else {
-            winText += `Best Time: ${C.gd.times[C.currentLevelNum].toFixed(2)}`;
+            // winText += `Best Time: ${C.gd.times[C.currentLevelNum].toFixed(2)}`;
         }
         let winMessage = this.add.bitmapText(-90, 12, '8px', winText).setCenterAlign().setScale(2);
         this.win.add(winMessage);
         this.win.setPosition(133, -200);
 
-        this.tilemove = 15;
+        this.tilemove = 1;
         this.ih = new IH(this);
         this.events.emit('holdinput');
 
         this.lights.enable();
-        this.lights.setAmbientColor(0xffffff);
-        this.lights.addLight(0,0, 100, 0xffffff, 1);
+        this.lights.setAmbientColor(0x555555);
+        this.lights.addLight(133,100, 100, 0xffffff, 1);
         
-        let menu = this.CreateButton('Menu', 0).setPosition(0,-40).setDepth(20);
+        let menu = this.CreateButton('Back to\nSurface', 0).setPosition(0,-44).setDepth(20);
         let replay = this.CreateButton('Replay', 90).setPosition(60,0).setDepth(20);
         let replay2 = this.CreateButton('Replay', -90).setPosition(-60,0).setDepth(20);
-        let next = this.CreateButton('Next', 180).setPosition(0,0).setDepth(20);
+        let next = this.CreateButton('Go\nDeeper', 180).setPosition(0,0).setDepth(20);
         if(C.currentLevelNum == C.MAX_LEVEL)
             next.setVisible(false);
         this.buttons = this.add.container(133,300,[menu, replay2, replay, next]).setDepth(100);
 
-        this.bg = this.add.tileSprite(0,0,266,200, 'atlas', 'swishbg_0').setAlpha(0).setOrigin(0,0);
+        this.bg = this.add.tileSprite(0,0,266,200, 'bg').setAlpha(0).setOrigin(0,0).setPipeline('Light2D');
         // this.win = this.add.sprite(133, -100, 'atlas', 'WinThing');
         this.tweens.add( {
             targets:[this.win],
@@ -88,9 +88,9 @@ export class WinScene extends Phaser.Scene {
         let replay = this.add.container();
         let b = this.add.image(0,0,'atlas', 'button2_0');
         replay.add(b);
-        let a = this.add.image(0,5,'atlas', 'arrow').setAngle(arrowRotation);
+        let a = this.add.image(0,12,'atlas', 'arrow').setAngle(arrowRotation).setScale(.5);
         replay.add(a);
-        let t = this.add.bitmapText(-10, -15, '8px', text).setCenterAlign();
+        let t = this.add.bitmapText(-15, -15, '8px', text).setCenterAlign();
         replay.add(t);
         return replay;
     } 

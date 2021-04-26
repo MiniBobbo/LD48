@@ -69,6 +69,11 @@ export class Preload extends Phaser.Scene {
         this.load.multiatlas('atlas', 'atlas.json');
         this.load.json('levels', 'levels.ldtk');
         this.load.image('button', ['button_0.png', 'button_0_n.png']);
+        this.load.image('menubutton', 'button.png');
+        this.load.image('bg', ['bg.png', 'bg_n.png']);
+        this.load.image('title', ['title.png', 'title_n.png']);
+
+        this.LoadSounds();
     }
 
 
@@ -113,9 +118,21 @@ export class Preload extends Phaser.Scene {
         this.anims.create({ key: 'player_jumpup', frameRate: 20, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_jumpup_', end: 0}), repeat: -1 });
         this.anims.create({ key: 'player_jumpup_hold', frameRate: 20, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_jumpup_hold_', end: 0}), repeat: -1 });
         this.anims.create({ key: 'player_dead', frameRate: 60, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_dead.png_', end: 36}), repeat: 0 });
+        this.anims.create({ key: 'player_throw_hold', frameRate: 20, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_throw_', end: 5}), repeat: 0 });
+        this.anims.create({ key: 'player_throw', frameRate: 20, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_throw_', end: 5}), repeat: 0 });
         this.anims.create({ key: 'player_dead_hold', frameRate: 60, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_dead.png_', end: 36}), repeat: 0 });
-        this.anims.create({ key: 'player_jumpdown', frameRate: 3, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_jumpdown_', end: 1}), repeat: 0 });
-        this.anims.create({ key: 'player_jumpdown_hold', frameRate: 3, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_jumpdown_hold_', end: 1}), repeat: 0 });
+        this.anims.create({ key: 'player_jumpdown', frameRate: 6, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_jumpdown_', end: 1}), repeat: 0 });
+        this.anims.create({ key: 'player_jumpdown_hold', frameRate: 6, frames: this.anims.generateFrameNames('atlas', { prefix: 'player_jumpdown_hold_', end: 1}), repeat: 0 });
 
+    }
+
+    LoadSounds() {
+        this.load.audio('throw', './sounds/throw.wav');
+        this.load.audio('land', './sounds/land.wav');
+        this.load.audio('flameout', './sounds/flameout.wav');
+        this.load.audio('jump', './sounds/jump.wav');
+        this.load.audio('dead', './sounds/dead.wav');
+        this.load.audio('step', './sounds/footstep.wav');
+        this.load.audio('mystery', ['./sounds/Mystery.mp3', './sounds/Mystery.ogg']);
     }
 }

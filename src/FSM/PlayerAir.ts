@@ -2,6 +2,7 @@ import { FSMModule } from "./FSMModule";
 import { Entity } from "../entities/Entity";
 import { IH } from "../IH/IH";
 import { C } from "../C";
+import { SOUND } from "../Sounds";
 
 export class PlayerAir extends FSMModule {
     e!:Entity;
@@ -52,6 +53,8 @@ export class PlayerAir extends FSMModule {
         
         if(!this.FirstPass) {
             if(this.e.sprite.body.blocked.down) {
+                this.e.gs.events.emit('sound', SOUND.LAND);
+
                 this.parent.changeFSM('ground');
             } 
         }

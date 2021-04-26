@@ -1,5 +1,6 @@
 import { C } from "./C";
 import { GameScene } from "./scenes/GameScene";
+import { SOUND } from "./Sounds";
 
 export class Flame {
     scene:Phaser.Scene;
@@ -69,10 +70,13 @@ export class Flame {
 
 
     FlameOff() {
+        if(this.currentlyOn == true)
+            this.scene.events.emit('sound', SOUND.FLAMEOUT);
         this.e.stop();
         this.e2.stop();
         this.light.setVisible(false);
         this.currentlyOn = false;
+
     }
 
     FlameOn() {

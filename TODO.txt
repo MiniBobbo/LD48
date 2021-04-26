@@ -44,9 +44,11 @@ Sprint 2
 Sprint 3
 - Ghosts that run away from the light but will kill you if they hit you.
 - Wandering Ghosts.
+- Vengeful Ghosts.
 
 Graphics Sprint 3
 -Ghosts
+- Vengeful Ghosts.
 
 Sprint 4
 Bolt shooters
@@ -63,7 +65,7 @@ Zone that doesn't let you relight the flame
 Finalize Main Menu and Title
 Light Unlit torches with fire
 Teleporters
-Vengeful Ghosts.
+Crocodiles.
 
 
 SFX Sprint

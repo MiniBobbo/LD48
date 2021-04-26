@@ -7,6 +7,8 @@ import { Flame } from "../Flame";
 import { SetupMapHelper } from "../helpers/SetupMapHelper";
 import { IH } from "../IH/IH";
 import { LDtkMapPack, LdtkReader } from "../map/LDtkReader";
+import { SOUND, Sounds } from "../Sounds";
+import { BaseAttack } from "./attacks/BaseAttack";
 
 export class GameScene extends Phaser.Scene {
     collideMap!:Array<Phaser.GameObjects.GameObject>;
@@ -26,6 +28,8 @@ export class GameScene extends Phaser.Scene {
     cam:CamObj;
     dangerSprites:Array<Phaser.Physics.Arcade.Sprite>;
     entities:Array<Entity>;
+    attacks:Array<BaseAttack>;
+    s:Sounds;
 
     preload() {
         this.ih = new IH(this);
@@ -65,6 +69,8 @@ export class GameScene extends Phaser.Scene {
         this.events.once('playerwin', () => {this.PlayerWin();} );
         this.events.once('playerdead', () => {this.PlayerLose();} );
 
+        this.events.on('sound', (sound:SOUND)=> {this.s.PlaySound(sound);}, this);
+
         this.input.on('pointerdown', () => {
 
         });
@@ -97,12 +103,16 @@ export class GameScene extends Phaser.Scene {
 
     init() {
         this.firstBoot = false;
+        this.attacks = [];
         this.events.on('destroy', () => {console.log('Game Scene Destroyed.');});
         this.events.on('shutdown', () => {console.log('Game Scene shut down.');  this.Shutdown()});
+
+        this.s = new Sounds(this);
     }
 
     PlayerLose() {
         console.log("Lose");
+        this.s.PlaySound(SOUND.DEAD);
         this.gs = GameState.LOSE;
         this.events.emit('holdinput');
         this.flame.FlameOff();
@@ -131,6 +141,10 @@ export class GameScene extends Phaser.Scene {
     }
 
     Shutdown() {
+        this.attacks.forEach(element => {
+            element.Destroy();
+        });
+        this.attacks = [];
         this.flame.dispose();
         this.lights.destroy();
         if(this.player != null)
@@ -196,7 +210,7 @@ export class GameScene extends Phaser.Scene {
 
         this.player.sprite.alpha = 1;
         this.time.delayedCall(2200, () => {
-            this.player.PlayAnimation('stand');
+            // this.player.PlayAnimation('stand');
             this.events.emit('resumeinput');
             this.gs = GameState.GAME;
             this.events.emit('startlevel');
@@ -232,6 +246,17 @@ export class GameScene extends Phaser.Scene {
 
         }
     }
+    
+    GetEnemyAttack():any {
+        let a = this.attacks.find( (a:BaseAttack) => { return a.sprite.body.enable === false;})
+        if(a===undefined) {
+            a = new BaseAttack(this);
+            this.attacks.push(a);
+            this.dangerSprites.push(a.sprite);
+        }
+        return a;
+    }
+
 
 }
 
